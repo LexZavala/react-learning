@@ -29,7 +29,8 @@ function App() {
     }
 
     function handleClear(){
-        const newTodos = todos.filter()
+        const newTodos = todos.filter(todo => !todo.complete)
+        setTodos(newTodos);
     }
 
     //THIS FUNCTION MAKING THE ADD BUTTON USE THE INPUT TO CREATE NEW TO DO OBJECTS
