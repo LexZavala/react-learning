@@ -19,6 +19,19 @@ function App() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
     }, [todos]);
 
+    /* THIS FUNCTION IS TAKING THE PARAMETER OF ID TO LOCATE THE MATCHING OBJECT AND IT
+    TOGGLES THE CHECKMARK STATE OF COMPLETION*/
+    function toggleTodo(id) {
+        const newTodos = [...todos];
+        const todo = newTodos.find(todo => todo.id === id);
+        todo.complete = !todo.complete;
+        setTodos(newTodos);
+    }
+
+    function handleClear(){
+        const newTodos = todos.filter()
+    }
+
     //THIS FUNCTION MAKING THE ADD BUTTON USE THE INPUT TO CREATE NEW TO DO OBJECTS
     function handleAddTodo (e){
        const name = todoNameRef.current.value;
@@ -31,11 +44,11 @@ function App() {
 
   return (
       <>
-        <TodoList todos = {todos} />
+        <TodoList todos = {todos} toggleTodo = {toggleTodo} />
         <input ref={todoNameRef} type="text"/>
         <button onClick={handleAddTodo}>Add To Do</button>
-        <button>Clear Completed ToDos</button>
-        <div> 0 left to do </div>
+        <button onClick={handleClear}>Clear Completed ToDos</button>
+        <div>{todos.filter(todo => !todo.complete).length} left to do </div>
       </>
 
   )
