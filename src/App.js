@@ -47,7 +47,7 @@ function App() {
 
   return (
       <>
-      <div>
+      <div class="d-flex justify-content-center">
         <h1>2 DO LIST</h1>
       </div>
         <TodoList todos = {todos} toggleTodo = {toggleTodo} />
