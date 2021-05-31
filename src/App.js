@@ -1,6 +1,8 @@
 import React, {useState, useRef, useEffect} from "react";
 import TodoList from "./TodoList";
 import uuidv4 from 'uuid/dist/v4';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
@@ -45,6 +47,9 @@ function App() {
 
   return (
       <>
+      <div>
+        <h1>2 DO LIST</h1>
+      </div>
         <TodoList todos = {todos} toggleTodo = {toggleTodo} />
         <input ref={todoNameRef} type="text"/>
         <button onClick={handleAddTodo}>Add To Do</button>
