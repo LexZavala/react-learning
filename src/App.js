@@ -4,6 +4,7 @@ import uuidv4 from 'uuid/dist/v4';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
@@ -52,7 +53,7 @@ function App() {
       <div class="d-flex justify-content-center" id="title">
         <h1>2 DO LIST</h1>
       </div>
-      <div>
+      <div class="d-flex justify-content-center" id="card-container">
           <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
@@ -61,13 +62,14 @@ function App() {
                       Some quick example text to build on the card title and make up the bulk of
                       the card's content.
                   </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <TodoList todos = {todos} toggleTodo = {toggleTodo} />
+                  <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
               </Card.Body>
           </Card>
       </div>
-        <TodoList todos = {todos} toggleTodo = {toggleTodo} />
+        {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
         <input ref={todoNameRef} type="text"/>
-        <button onClick={handleAddTodo}>Add To Do</button>
+        {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
         <button onClick={handleClear}>Clear Completed ToDos</button>
         <div>{todos.filter(todo => !todo.complete).length} left to do </div>
       </>
