@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+#addButton {
+    background-color: cornflowerblue;
+    border: none;
+}
+
+#input {
+    background-color: #303030;
+}
+
+#todoLabel {
+    background-color: #0d0c0a;
+    border: none;
+}
+::placeholder{
+    color: whitesmoke;
+}
+
+#card{
+    background-color: #0d0c0a;
+}
