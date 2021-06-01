@@ -63,14 +63,18 @@ function App() {
                       the card's content.
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
-                  <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
+                  <Card.Body>
+                      <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
+                      <Button onClick={handleClear} variant="danger" id="clearButton">Clear Completed</Button>
+                  </Card.Body>
+
               </Card.Body>
           </Card>
       </div>
         {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
         <input ref={todoNameRef} type="text"/>
         {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
-        <button onClick={handleClear}>Clear Completed ToDos</button>
+        {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
         <div>{todos.filter(todo => !todo.complete).length} left to do </div>
       </>
 
