@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
+import "./style.css";
+import Art from "./img/orange-art.jpg";
+
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
@@ -53,17 +56,17 @@ function App() {
       <div class="d-flex justify-content-center" id="title">
         <h1>2 DO LIST</h1>
       </div>
-      <div class="d-flex justify-content-center" id="card-container">
-          <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+      <div class="d-flex justify-content-center" id="card-container" >
+          <Card style={{ width: '18rem' }} id="card">
+              <Card.Img variant="top" src={Art}/>
               <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
+                  <Card.Title>What is there to do today?</Card.Title>
+                  <Card.Text class="text-muted">
+                      Enter any tasks or to dos by adding task, check those that are complete and clear them.
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
                   <Card.Body>
+                      <input id="input" placeholder="Clean the garage" ref={todoNameRef} type="text"/>
                       <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
                       <Button onClick={handleClear} variant="danger" id="clearButton">Clear Completed</Button>
                   </Card.Body>
@@ -72,7 +75,7 @@ function App() {
           </Card>
       </div>
         {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
-        <input ref={todoNameRef} type="text"/>
+        {/*<input ref={todoNameRef} type="text"/>*/}
         {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
         {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
         <div>{todos.filter(todo => !todo.complete).length} left to do </div>
