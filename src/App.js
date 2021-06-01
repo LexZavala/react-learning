@@ -2,6 +2,9 @@ import React, {useState, useRef, useEffect} from "react";
 import TodoList from "./TodoList";
 import uuidv4 from 'uuid/dist/v4';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
@@ -47,12 +50,26 @@ function App() {
 
   return (
       <>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center" id="title">
         <h1>2 DO LIST</h1>
       </div>
-        <TodoList todos = {todos} toggleTodo = {toggleTodo} />
+      <div class="d-flex justify-content-center" id="card-container">
+          <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                      Some quick example text to build on the card title and make up the bulk of
+                      the card's content.
+                  </Card.Text>
+                  <TodoList todos = {todos} toggleTodo = {toggleTodo} />
+                  <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
+              </Card.Body>
+          </Card>
+      </div>
+        {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
         <input ref={todoNameRef} type="text"/>
-        <button onClick={handleAddTodo}>Add To Do</button>
+        {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
         <button onClick={handleClear}>Clear Completed ToDos</button>
         <div>{todos.filter(todo => !todo.complete).length} left to do </div>
       </>
