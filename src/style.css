@@ -3,9 +3,12 @@ body {
     color: whitesmoke;
 }
 
+h1 {
+    padding-bottom: 3em;
+}
 
 #addButton {
-    background-color: cornflowerblue;
+    background-color: #3CB371;
     border: none;
 }
 
@@ -23,4 +26,16 @@ body {
 
 #card{
     background-color: #0d0c0a;
+}
+
+.add{
+    border-radius: 25px;
+    margin-top: 2em;
+    margin-right: auto;
+}
+
+.delete{
+    border-radius: 25px;
+    margin-top: 2em;
+    margin-left: auto;
 }

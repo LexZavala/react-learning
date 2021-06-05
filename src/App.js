@@ -11,11 +11,11 @@ import Art from "./img/orange-art.jpg";
 import ReactDOM from 'react-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faCoffee, faPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-library.add(fab, faCheckSquare, faCoffee)
+library.add(fab, faCheckSquare, faCoffee, faPlus, faTrashAlt);
 
 
 
@@ -74,15 +74,20 @@ function App() {
               <Card.Img variant="top" src={Art}/>
               <Card.Body>
                   <Card.Title>What is there to do today?</Card.Title>
-                  <FontAwesomeIcon icon= "coffee"/>
                   <Card.Text class="text-muted">
                       Enter any tasks or to dos by adding task, check those that are complete and clear them.
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
                   <Card.Body>
                       <input id="input" placeholder="Clean the garage" ref={todoNameRef} type="text"/>
-                      <Button onClick={handleAddTodo} variant="primary" id="addButton">Add Task</Button>
-                      <Button onClick={handleClear} variant="danger" id="clearButton">Clear Completed</Button>
+                      <div className="d-flex row justify-content-center">
+                          <Button className="add col-2" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
+                          <Button className="delete col-2" onClick={handleClear} variant="danger" id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
+                      </div>
+                      <div className= "row d-flex justify-content-center">
+                          <div className="col-6">{todos.filter(todo => !todo.complete).length} left to do </div>
+                      </div>
+
                   </Card.Body>
 
               </Card.Body>
@@ -92,7 +97,7 @@ function App() {
         {/*<input ref={todoNameRef} type="text"/>*/}
         {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
         {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
-        <div>{todos.filter(todo => !todo.complete).length} left to do </div>
+
       </>
 
   )

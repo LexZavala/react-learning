@@ -17,8 +17,6 @@ const Todo = ({todo, toggleTodo}) => {
                         {todo.name}
                     </label>
                 </ListGroup>
-
-
             </Card>
         </>
 
