@@ -7,11 +7,15 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./style.css";
 import Art from "./img/orange-art.jpg";
+import * as PropTypes from "prop-types";
 
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
+
+
+// BEGINNING OF REACT APP
 function App() {
     const [todos, setTodos] = useState([])
     const todoNameRef = useRef();
