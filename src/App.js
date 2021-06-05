@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from "react";
+import * as PropTypes from "prop-types";
 import TodoList from "./TodoList";
 import uuidv4 from 'uuid/dist/v4';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +8,15 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./style.css";
 import Art from "./img/orange-art.jpg";
-import * as PropTypes from "prop-types";
+import ReactDOM from 'react-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+library.add(fab, faCheckSquare, faCoffee)
+
 
 
 
@@ -65,6 +74,7 @@ function App() {
               <Card.Img variant="top" src={Art}/>
               <Card.Body>
                   <Card.Title>What is there to do today?</Card.Title>
+                  <FontAwesomeIcon icon= "coffee"/>
                   <Card.Text class="text-muted">
                       Enter any tasks or to dos by adding task, check those that are complete and clear them.
                   </Card.Text>
