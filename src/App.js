@@ -76,12 +76,12 @@ function App() {
               <Card.Img variant="top" src={Art}/>
               <Card.Body>
                   <Card.Title>What is there to do today?</Card.Title>
-                  <Card.Text class="text-muted">
-                      Enter any tasks or to dos by adding task, check those that are complete and clear them.
+                  <Card.Text class="text-muted mb-4">
+                      Type any tasks or to dos and click add, check those that are complete and delete them.
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
                   <Card.Body className="footerPadding">
-                      <input id="input" placeholder="Clean the garage" ref={todoNameRef} type="text"/>
+                      <input id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
                       <div className="d-flex row justify-content-center">
                           <Button className="add col-2" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
                           <Button className="delete col-2" onClick={handleClear} variant="danger" id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>

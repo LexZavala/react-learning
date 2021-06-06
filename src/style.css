@@ -17,6 +17,7 @@ h1 {
     border-radius: 5px;
     border: none;
     width: 100%;
+    color: whitesmoke;
 
 }
 
@@ -32,10 +33,9 @@ h1 {
 }
 
 .todoContainer {
-    margin-top: .7em;
-    margin-bottom: .7em;
-    /*border: none;*/
-    border: solid 1px slategrey;
+    margin: .7em auto;
+    border: none;
+    /*border: solid 1px slategrey;*/
 
 }
 
