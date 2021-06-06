@@ -20,19 +20,24 @@ h1 {
 
 }
 
-#todoLabel {
+.groupItem {
+    /*margin-bottom: .5em ;*/
     background-color: #0d0c0a;
-    outline: none;
-
+    color: whitesmoke;
 }
 
 .labelContainer {
     outline: none ;
-    /*margin-top: .5em;*/
-    /*margin-bottom: .5em;*/
+
 }
 
-#todoInput {
+todoContainer {
+    /*margin-top: .5em;*/
+    /*margin-bottom: .5em;*/
+    border: none;
+}
+
+.todoInput {
     margin-right: .7em;
 }
 

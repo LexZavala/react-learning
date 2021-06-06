@@ -2,6 +2,7 @@ import React from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
 
 const Todo = ({todo, toggleTodo}) => {
     function handleTodoClick (){
@@ -10,12 +11,9 @@ const Todo = ({todo, toggleTodo}) => {
 
     return (
         <>
-            <Card style={{ width: '15rem' }}>
-                <ListGroup className="labelContainer">
-                    <label id="todoLabel">
-                        <input id="todoInput" type="checkbox" checked={todo.complete} onChange={handleTodoClick}/>
-                        {todo.name}
-                    </label>
+            <Card className="todoContainer" style={{ width: '15rem' }}>
+                <ListGroup  className="labelContainer">
+                        <ListGroupItem className="groupItem" ><input className="todoInput" type="checkbox" checked={todo.complete} onChange={handleTodoClick}/>{todo.name}</ListGroupItem>
                 </ListGroup>
             </Card>
         </>
