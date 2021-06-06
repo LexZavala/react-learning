@@ -78,14 +78,14 @@ function App() {
                       Enter any tasks or to dos by adding task, check those that are complete and clear them.
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
-                  <Card.Body>
+                  <Card.Body className="footerPadding">
                       <input id="input" placeholder="Clean the garage" ref={todoNameRef} type="text"/>
                       <div className="d-flex row justify-content-center">
                           <Button className="add col-2" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
                           <Button className="delete col-2" onClick={handleClear} variant="danger" id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
                       </div>
                       <div className= "row d-flex justify-content-center">
-                          <div className="col-6">{todos.filter(todo => !todo.complete).length} left to do </div>
+                          <div className="leftTodo col-6 text-center">{todos.filter(todo => !todo.complete).length} left to do </div>
                       </div>
 
                   </Card.Body>

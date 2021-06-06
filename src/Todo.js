@@ -11,9 +11,9 @@ const Todo = ({todo, toggleTodo}) => {
     return (
         <>
             <Card style={{ width: '15rem' }}>
-                <ListGroup variant="flush">
+                <ListGroup className="labelContainer">
                     <label id="todoLabel">
-                        <input type="checkbox" checked={todo.complete} onChange={handleTodoClick}/>
+                        <input id="todoInput" type="checkbox" checked={todo.complete} onChange={handleTodoClick}/>
                         {todo.name}
                     </label>
                 </ListGroup>

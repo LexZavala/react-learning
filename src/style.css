@@ -14,14 +14,33 @@ h1 {
 
 #input {
     background-color: #303030;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+
 }
 
 #todoLabel {
     background-color: #0d0c0a;
-    border: none;
+    outline: none;
+
+}
+
+.labelContainer {
+    outline: none ;
+    /*margin-top: .5em;*/
+    /*margin-bottom: .5em;*/
+}
+
+#todoInput {
+    margin-right: .7em;
+}
+
+#todoLabel:focus {
+    outline: none;
 }
 ::placeholder{
-    color: whitesmoke;
+    color: slategrey;
 }
 
 #card{
@@ -38,4 +57,12 @@ h1 {
     border-radius: 25px;
     margin-top: 2em;
     margin-left: auto;
+}
+
+.leftTodo {
+    font-size: small;
+    color: dimgrey;
+}
+.footerPadding {
+    padding-bottom: 0;
 }
