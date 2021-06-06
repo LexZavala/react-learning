@@ -15,16 +15,9 @@ import { faCheckSquare, faCoffee, faPlus, faTrashAlt } from '@fortawesome/free-s
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.css";
 
-
-
 library.add(fab, faCheckSquare, faCoffee, faPlus, faTrashAlt);
 
-
-
-
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
-
-
 
 // BEGINNING OF REACT APP
 function App() {
@@ -104,6 +97,5 @@ function App() {
 
   )
 }
-
 
 export default App;
