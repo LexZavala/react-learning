@@ -24,17 +24,19 @@ h1 {
     /*margin-bottom: .5em ;*/
     background-color: #0d0c0a;
     color: whitesmoke;
+    border: none;
 }
 
 .labelContainer {
-    outline: none ;
-
+    border: none;
 }
 
-todoContainer {
-    /*margin-top: .5em;*/
-    /*margin-bottom: .5em;*/
-    border: none;
+.todoContainer {
+    margin-top: .7em;
+    margin-bottom: .7em;
+    /*border: none;*/
+    border: solid 1px slategrey;
+
 }
 
 .todoInput {
