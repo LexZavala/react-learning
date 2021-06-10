@@ -2,7 +2,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-image: linear-gradient(26deg, #380036, #0CBABA);
     color: whitesmoke;
     height: 100vh;
 }
@@ -56,6 +56,12 @@ h1 {
 
 #card{
     background-color: #0d0c0a;
+    border-radius: 16px;
+
+}
+
+.imgBanner {
+    border-radius: 16px 16px 0 0;
 }
 
 .add{
