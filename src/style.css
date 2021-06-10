@@ -1,6 +1,10 @@
+html {
+}
+
 body {
     background-color: black;
     color: whitesmoke;
+    height: 100vh;
 }
 
 h1 {
@@ -40,7 +44,7 @@ h1 {
 }
 
 .todoInput {
-    margin-right: .7em;
+    margin-right: 1em;
 }
 
 #todoLabel:focus {
