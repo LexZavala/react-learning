@@ -57,7 +57,6 @@ h1 {
 #card{
     background-color: #0d0c0a;
     border-radius: 16px;
-
 }
 
 .imgBanner {
@@ -68,12 +67,14 @@ h1 {
     border-radius: 25px;
     margin-top: 2em;
     margin-right: auto;
+    width: 2.6em;
 }
 
 .delete{
     border-radius: 25px;
     margin-top: 2em;
     margin-left: auto;
+    width: 2.6em;
 }
 
 .leftTodo {

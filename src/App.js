@@ -65,7 +65,7 @@ function App() {
         <h1>2 DO LIST</h1>
       </div>
       <div class="d-flex justify-content-center" id="card-container" >
-          <Card style={{ width: '18rem' }} id="card">
+          <Card style={{ width: '25rem' }} id="card">
               <Card.Img className="imgBanner" variant="top" src={Art}/>
               <Card.Body>
                   <Card.Title>What is there to do today?</Card.Title>
