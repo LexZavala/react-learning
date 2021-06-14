@@ -74,7 +74,7 @@ function App() {
                   </Card.Text>
                   <TodoList todos = {todos} toggleTodo = {toggleTodo} />
                   <Card.Body className="footerPadding">
-                      <input id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
+                      <input className="" id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
                       <div className="d-flex row justify-content-center">
                           <Button className="add col-2" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
                           <Button className="delete col-2" onClick={handleClear} variant="danger" id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
@@ -82,9 +82,7 @@ function App() {
                       <div className= "row d-flex justify-content-center">
                           <div className="leftTodo col-6 text-center">{todos.filter(todo => !todo.complete).length} left to do </div>
                       </div>
-
                   </Card.Body>
-
               </Card.Body>
           </Card>
       </div>
