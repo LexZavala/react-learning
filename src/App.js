@@ -59,16 +59,23 @@ function App() {
         todoNameRef.current.value = null
     }
 
+    // DOM query to also create to do when clicking enter
+    document.querySelector('#input').addEventListener('keypress', function (e){
+        if (e.key === 'Enter'){
+            handleAddTodo();
+        }
+    });
+
   return (
       <>
       <div class="d-flex justify-content-center" id="title">
         <h1>2 DO LIST</h1>
       </div>
-      <div class="d-flex justify-content-center" id="card-container" >
+      <div class="d-flex justify-content-center glass" id="card-container" >
           <Card style={{ width: '25rem' }} id="card">
               <Card.Img className="imgBanner" variant="top" src={Art}/>
               <Card.Body>
-                  <Card.Title>What is there to do today?</Card.Title>
+                  <Card.Title className="subtitle">What is there to do today?</Card.Title>
                   <Card.Text class="text-muted mb-4">
                       Type any tasks or to dos and click add, check those that are complete and delete them.
                   </Card.Text>
