@@ -9,8 +9,9 @@ body {
 }
 
 h1 {
-    padding-bottom: 3em;
+    padding-bottom: .5em;
     font-family: 'Shrikhand', cursive;
+    font-size: 9.5em;
 }
 
 #addButton {
