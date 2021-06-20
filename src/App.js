@@ -99,7 +99,6 @@ function App() {
         {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
 
       </>
-
   )
 }
 

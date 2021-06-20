@@ -17,7 +17,6 @@ const Todo = ({todo, toggleTodo}) => {
                 </ListGroup>
             </Card>
         </>
-
     );
 };
 
