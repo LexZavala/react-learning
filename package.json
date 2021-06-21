@@ -2,6 +2,7 @@
   "name": "to-do-list",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://lexzavala.github.io/to-do-list/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
