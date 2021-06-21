@@ -60,11 +60,18 @@ function App() {
     }
 
     // DOM query to also create to do when clicking enter
-    document.querySelector('#input').addEventListener('keypress', function (e){
-        if (e.key === 'Enter'){
-            handleAddTodo();
-        }
-    });
+
+    const domInputSelector = document.querySelector('#input');
+
+    if (domInputSelector){
+        domInputSelector.addEventListener('keypress', function (e){
+            if (e.key === 'Enter'){
+                handleAddTodo();
+            } else {
+                console.log("error");
+            }
+        });
+    }
 
   return (
       <>
