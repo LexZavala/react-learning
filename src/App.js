@@ -75,36 +75,35 @@ function App() {
 
   return (
       <>
-      <div class="d-flex justify-content-center" id="title">
-        <h1>2 DO LIST</h1>
-      </div>
-      <div class="d-flex justify-content-center glass" id="card-container" >
-          <Card style={{ width: '25rem' }} id="card">
-              {/*<Card.Img className="imgBanner" variant="top" src={Art}/>*/}
-              <Card.Body>
-                  <Card.Title className="subtitle">What is there to do today?</Card.Title>
-                  <Card.Text class="text-muted mb-4">
-                      Add any tasks or to-dos, check them when completed and delete them.
-                  </Card.Text>
-                  <TodoList todos = {todos} toggleTodo = {toggleTodo} />
-                  <Card.Body className="footerPadding">
-                      <input className="" id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
-                      <div className="d-flex row justify-content-center">
-                          <Button className="add col-2 grow" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
-                          <Button className="delete col-2 grow" onClick={handleClear}  id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
-                      </div>
-                      <div className= "row d-flex justify-content-center">
-                          <div className="leftTodo col-6 text-center">{todos.filter(todo => !todo.complete).length} left to do </div>
-                      </div>
+          <div class="d-flex justify-content-center" id="title">
+              <h1>2 DO LIST</h1>
+          </div>
+          <div class="d-flex justify-content-center glass" id="card-container" >
+              <Card style={{ width: '25rem' }} id="card">
+                  {/*<Card.Img className="imgBanner" variant="top" src={Art}/>*/}
+                  <Card.Body>
+                      <Card.Title className="subtitle">What is there to do today?</Card.Title>
+                      <Card.Text class="text-muted mb-4">
+                          Add any tasks or to-dos, check them when completed and delete them.
+                      </Card.Text>
+                      <TodoList todos = {todos} toggleTodo = {toggleTodo} />
+                      <Card.Body className="footerPadding">
+                          <input className="" id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
+                          <div className="d-flex row justify-content-center">
+                              <Button className="add col-2 grow" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
+                              <Button className="delete col-2 grow" onClick={handleClear}  id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
+                          </div>
+                          <div className= "row d-flex justify-content-center">
+                              <div className="leftTodo col-6 text-center">{todos.filter(todo => !todo.complete).length} left to do </div>
+                          </div>
+                      </Card.Body>
                   </Card.Body>
-              </Card.Body>
-          </Card>
-      </div>
-        {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
-        {/*<input ref={todoNameRef} type="text"/>*/}
-        {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
-        {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
-
+              </Card>
+          </div>
+          {/*<TodoList todos = {todos} toggleTodo = {toggleTodo} />*/}
+          {/*<input ref={todoNameRef} type="text"/>*/}
+          {/*<button onClick={handleAddTodo}>Add To Do</button>*/}
+          {/*<button onClick={handleClear}>Clear Completed ToDos</button>*/}
       </>
   )
 }
