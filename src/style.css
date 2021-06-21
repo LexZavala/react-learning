@@ -95,6 +95,10 @@ h1 {
     width: 2.4em;
 }
 
+.delete:hover {
+    background-color: #FF3152;
+}
+
 .leftTodo {
     font-size: small;
     color: dimgrey;

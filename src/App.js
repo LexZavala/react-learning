@@ -90,8 +90,8 @@ function App() {
                   <Card.Body className="footerPadding">
                       <input className="" id="input" placeholder=" Enter your task" ref={todoNameRef} type="text"/>
                       <div className="d-flex row justify-content-center">
-                          <Button className="add col-2" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
-                          <Button className="delete col-2" onClick={handleClear}  id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
+                          <Button className="add col-2 grow" onClick={handleAddTodo} variant="primary" id="addButton"><FontAwesomeIcon icon="plus" /></Button>
+                          <Button className="delete col-2 grow" onClick={handleClear}  id="clearButton"><FontAwesomeIcon icon="trash-alt" /></Button>
                       </div>
                       <div className= "row d-flex justify-content-center">
                           <div className="leftTodo col-6 text-center">{todos.filter(todo => !todo.complete).length} left to do </div>
