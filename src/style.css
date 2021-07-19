@@ -87,6 +87,7 @@ h1 {
 }
 
 .delete{
+    background: none;
     color: #FF3152;
     border: none;
     border-radius: 25px;
@@ -96,7 +97,8 @@ h1 {
 }
 
 .delete:hover {
-    background-color: #FF3152;
+    background: none;
+    /*background-color: #FF3152;*/
 }
 
 .leftTodo {
@@ -108,5 +110,5 @@ h1 {
 }
 
 .grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
+.grow:hover { transform: scale(1.2); }
 
